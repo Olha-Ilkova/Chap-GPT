@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+.chat-bgr-opacity{
+    background-image: url(./img/panorama-lviv.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    position: absolute;
+    z-index: -6000;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+}
+#root{
+    display: flex;
+    justify-content: center;
+}
+.chat {
+    height: 90vh;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+.chat-container {
+    max-height: 480px;
+    min-height: 150px;
+    overflow: auto;
+    width: 77vw;
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px 4px #38383891;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 17px;
+    background: #faf8ed;
+}
+.chat-question-variants{
+    text-align: left;
+    min-height: 35px;
+}
+.chat-question-variants > span:nth-child(1){
+    padding-left: 0;
+    margin-left: 0;
+    font-weight: 500;
+    font-size: 18px;
+    color: #452816;
+}
+.chat-question-variants > span{
+    padding: 5px 8px;
+    margin-left: 12px;
+    font-size: 12px;
+}
+.questionVariants{
+    box-shadow: 0.5px 0.5px 2px 0.5px #696969;
+    border-top: 1px solid #ffffff94;
+    border-left: 1px solid #ffffff94;
+}
+.chat-history{
+    scroll-margin-bottom: 0;
+    overflow-y: auto;
+    min-height: 120px
+}
+.chat-bubble {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+.question,
+.response {
+    padding: 20px;
+    max-width: 60%;
+    border-radius: 10px;
+    text-align: justify;
+    min-height: 30px;
+    min-width: 100px; 
+}
+.question {
+    background-color: #e0e0e069;
+    border-radius: 15px 30px 0 30px;
+    align-self: flex-end;
+    text-align: right;
+    
+}
+.response {
+    background-color: #d2d8a4c2;
+    border-radius: 30px 15px 30px 0;
+    text-indent: 20px;
+    color: #452816; 
+}
+.response:before{
+    content: 'Chat GPT: ';
+}
+.response: after{
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 10px;
+    border-color: transparent transparent transparent #EAEAEA;
+}
+.question:before{
+    content: 'You: ';
+}
+.question:after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 10px 8px 0;
+    border-color: transparent #F0F0F0 transparent transparent;
+}
+.timestamp{
+    font-size: 10px;
+    font-family: auto;
+    margin-top: 10px;
+    color: #979797;
+}
+.response > .timestamp{
+    text-align: left;
+    text-indent: 0;
+}
+.question-areaBtn, .questionVariants{
+    width: 17%;
+    height: 35px;
+    background: #c7d1dd;
+    color: white;
+    text-shadow: 1px 1px 2px #0000006b;
+    box-shadow: 1px 1px 2px 1px #696969;
+    border: none;
+    border-top: 2px solid #ffffff94;
+    border-left: 2px solid #ffffff94;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.question-areaBtn:hover, .questionVariants:hover{
+    border: none;
+    cursor: pointer;
+}
+.question-area{
+    display: flex;
+    justify-content: space-between;
+    min-height: 30px;
+    align-items: center;
+    padding-top: 10px;
+}
+.question-areaInp{
+    height: 30px;
+    width: 75%;
+    border-radius: 10px;
+    padding: 0 10px;
+    border: 2px solid #d2d8a4;
+}
+
+.chat, .question-areaInp{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Cormorant Garamond', serif;
+}
+
