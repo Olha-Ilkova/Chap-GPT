@@ -1,3 +1,7 @@
+- Take the archive and unpack it and execute the `npm install` command from the root.
+- Start the server with the command `npm run server` or node index.js
+- Go to a new tab in the terminal and run `npm run start`.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
